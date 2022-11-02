@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h3 class="alert alert-primary">Equipo técnico</h3>
+
+	<div class="bg-dark p-3">
+		<div class="row mx-0 pb-3 bg-light">
+			<div class="col-sm-8">
+				Order #88 <small class="text-muted">Today, 20 Mar 2021, 18:45 PM</small>
+
+			<div class="card rounded-top mb-2">
+				<div class="card-body">
+				
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-food" type="button" role="tab" aria-controls="pills-food" aria-selected="true">Food</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-drink-tab" data-toggle="pill" data-target="#pills-drink" type="button" role="tab" aria-controls="pills-drink" aria-selected="false">Drink</button>
+					</li>
+					</ul>
+				</div>
+			</div>
+
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">Food
+
+					<div class="row row-cols-1 row-cols-md-4">
+					  <div class="col mb-4 ">
+					    <div class="card" onclick="orderbasket('Pizza 1', 1.50);">
+
+					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">Pizza 1</h5>
+					        <p class="card-fw-bold"> 1.50</p>
+					      </div>
+
+					    </div>
+					  </div>
+
+					  <div class="col mb-4">
+					    <div class="card" onclick="orderbasket('Pizza 2', 1.99);">
+					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">Pizza 2</h5>
+					        <p class="card-fw-bold"> 1.99</p>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col mb-4">
+					    <div class="card" onclick="orderbasket('Pizza 3' , 2.15);">
+					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">Pizza 3</h5>
+					        <p class="card-fw-bold"> 2.15</p>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col mb-4">
+					    <div class="card" onclick="orderbasket('Pizza 4', 2.20);">
+					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">Pizza 4</h5>
+					        <p class="card-fw-bold"> 2.20</p>					        
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+					</div>
+
+
+
+
+					<div class="tab-pane fade" id="pills-drink" role="tabpanel" aria-labelledby="pills-drink-tab">Drink
+
+						<div class="row row-cols-1 row-cols-md-4 mb-4">
+						  <div class="col mb-4">
+						    <div class="card">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 1</h5>
+						        <p class="card-text fw-bold"> $10.50</p>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 2</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 3</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 4</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 5</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 6</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="col ">
+						    <div class="card mb-4">
+						      <img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" class="card-img-top" alt="..." >
+						      <div class="card-body">
+						        <h5 class="card-title">Cuba libre 7</h5>
+						        
+						      </div>
+						    </div>
+						  </div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">text
+
+				<div class="card">
+					<div class="card-body">
+						<h5>Order</h5>
+						<hr>
+						<ul id="orderlist" class="list-unstyled">
+						    <li><img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" style="width: 50px;"> Cuba libre New<span class="text-danger">$2.50</span></li>
+						</ul>
+					</div>	    
+				</div>
+			
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		
+		function orderbasket(itemname, itemprice){
+			const orderlist = document.getElementById('orderlist');
+
+			const orderitem = document.createElement('li');
+
+			const orderitempricespan = document.createElement('span');
+
+			//const orderitemname = document.createTextNode('Pizza 1 test');
+			const orderitemname = document.createTextNode(itemname);
+
+			const orderitemprice = document.createTextNode(' $ ' + itemprice);
+
+			//Addd text color to text-danger
+			orderitempricespan.className = 'text-danger';
+
+			//Add pricetextnode into span
+			orderitempricespan.appendChild(orderitemprice);
+
+			// Attach the itemname tag and itemprice to LI tag
+			orderitem.appendChild(orderitemname);
+
+			
+			//orderitem.appendChild(orderitemprice);
+			orderitem.appendChild(orderitempricespan);
+
+			orderlist.appendChild(orderitem);
+		}
+
+	</script>
+
+	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+https://www.youtube.com/watch?v=9cYXre60Imc
