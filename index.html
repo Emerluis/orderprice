@@ -35,7 +35,7 @@
 
 					<div class="row row-cols-1 row-cols-md-4">
 					  <div class="col mb-4 ">
-					    <div class="card" onclick="orderbasket('Pizza 1', 1.50);">
+					    <div class="card" onclick="orderbasket('Pizza 1', 1.50, 'https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9'); totalitems(); costitems();">
 
 					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
 					      <div class="card-body">
@@ -47,7 +47,8 @@
 					  </div>
 
 					  <div class="col mb-4">
-					    <div class="card" onclick="orderbasket('Pizza 2', 1.99);">
+					    <div class="card" onclick="orderbasket('Pizza 2', 1.99, 'https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9'); totalitems(); costitems();">
+
 					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
 					      <div class="card-body">
 					        <h5 class="card-title">Pizza 2</h5>
@@ -56,7 +57,7 @@
 					    </div>
 					  </div>
 					  <div class="col mb-4">
-					    <div class="card" onclick="orderbasket('Pizza 3' , 2.15);">
+					    <div class="card" onclick="orderbasket('Pizza 3' , 2.15, 'https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9'); totalitems(); costitems();">
 					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
 					      <div class="card-body">
 					        <h5 class="card-title">Pizza 3</h5>
@@ -65,7 +66,7 @@
 					    </div>
 					  </div>
 					  <div class="col mb-4">
-					    <div class="card" onclick="orderbasket('Pizza 4', 2.20);">
+					    <div class="card" onclick="orderbasket('Pizza 4', 2.20, 'https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9'); totalitems(); costitems();">
 					      <img src="https://img.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg?w=740&t=st=1666738842~exp=1666739442~hmac=a20c733a1858d0b49ecfe23a874b5f8978feeb75e337056b32eb4cfc7d0af6e9" class="card-img-top" alt="...">
 					      <div class="card-body">
 					        <h5 class="card-title">Pizza 4</h5>
@@ -168,6 +169,11 @@
 						<ul id="orderlist" class="list-unstyled">
 						    <li><img src="https://img.freepik.com/foto-gratis/bebida-cola-fresca-lima-verde_144627-12396.jpg?w=740&t=st=1666803743~exp=1666804343~hmac=cc9903885fa5475471d224f00731333043696d8592c30bc4d539e0f6872a0834" style="width: 50px;"> Cuba libre New<span class="text-danger">$2.50</span></li>
 						</ul>
+
+						<hr>
+						<big id="totalitems" class='card-text'></big>
+						<big id="totalcost" class='card-text'></big>
+
 					</div>	    
 				</div>
 			
@@ -178,7 +184,19 @@
 
 	<script type="text/javascript">
 		
-		function orderbasket(itemname, itemprice){
+		const orderitemsarray = [];
+		const orderPriceArray = [];
+		const orderarray = [];
+
+		function orderbasket(itemname, itemprice, itemimage){
+
+			orderitemsarray.push(itemname);
+			orderPriceArray.push(itemprice);
+
+			orderarray.push(itemname, itemprice, itemimage);
+			console.log(orderarray);
+			console.log(orderarray.length);
+
 			const orderlist = document.getElementById('orderlist');
 
 			const orderitem = document.createElement('li');
@@ -204,7 +222,29 @@
 			orderitem.appendChild(orderitempricespan);
 
 			orderlist.appendChild(orderitem);
+
+			// Add item image 
+			const orderitemimgtag = document.createElement('img');
+
+			orderitemimgtag.src = itemimage;
+
+			orderitemimgtag.className = 'w-25';
+
+			orderlist.appendChild(orderitemimgtag);
+		};
+
+		function totalitems(){
+			document.getElementById('totalitems').innerText = orderarray.length;
+			console.log(orderarray.length);
 		}
+
+		function costitems(){
+			document.getElementById('totalcost').innerText = orderPriceArray.reduce(sumarray);
+			function sumarray(total, num){
+				return total + num;
+			};
+			orderPriceArray.reduce(itemprice);
+		};
 
 	</script>
 
